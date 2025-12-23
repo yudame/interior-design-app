@@ -1,0 +1,112 @@
+name: interior_design_app
+description: AI-powered interior design visualization app
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_bloc: ^8.1.6
+  hydrated_bloc: ^9.1.5
+  bloc: ^8.1.4
+
+  # Code Generation
+  freezed_annotation: ^2.4.4
+  json_annotation: ^4.9.0
+
+  # Navigation
+  go_router: ^14.6.2
+
+  # Network & Connectivity
+  dio: ^5.7.0
+  connectivity_plus: ^6.1.0
+  dio_cache_interceptor: ^3.5.0
+
+  # Firebase
+  firebase_core: ^3.8.0
+  firebase_auth: ^5.3.4
+  cloud_firestore: ^5.5.0
+  firebase_storage: ^12.3.6
+  firebase_vertexai: ^1.0.0
+
+  # Local Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  flutter_secure_storage: ^9.2.2
+  shared_preferences: ^2.3.3
+
+  # Dependency Injection
+  get_it: ^8.0.2
+  injectable: ^2.5.0
+
+  # Image Handling
+  image_picker: ^1.1.2
+  cached_network_image: ^3.4.1
+
+  # Utilities
+  uuid: ^4.5.1
+  intl: ^0.19.0
+  equatable: ^2.0.5
+  path_provider: ^2.1.4
+  url_launcher: ^6.2.5
+
+  # Google AI
+  google_generative_ai: ^0.4.3
+
+  # Monitoring
+  sentry_flutter: ^8.10.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Code Generation
+  build_runner: ^2.4.13
+  freezed: ^2.5.2
+  json_serializable: ^6.8.0
+  injectable_generator: ^2.6.2
+  # Note: hive_generator removed due to analyzer conflict with freezed
+  # Use manual TypeAdapters or JSON serialization for Hive storage
+
+  # Testing
+  bloc_test: ^9.1.7
+  mocktail: ^1.0.4
+
+  # Linting
+  flutter_lints: ^5.0.0
+  flutter_driver:
+    sdk: flutter
+
+  # App Icon
+  flutter_launcher_icons: ^0.14.2
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  adaptive_icon_background: "#13161c"
+  adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/icon/
+
+  fonts:
+    - family: JetBrainsMono
+      fonts:
+        - asset: assets/fonts/JetBrainsMono-Regular.ttf
+        - asset: assets/fonts/JetBrainsMono-Medium.ttf
+          weight: 500
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
